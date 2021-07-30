@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<section class="main-section">
+    <div class="main-header" style="text-align: center;">
+        <div class="hero-text-container">
+            <h1 id="ht" class="hero-text"></h1>
+        </div>
+        <div class="hero-image-container mr-auto ml-auto" style="width: 50%; text-align: center;">
+            <img class = "hero-image" src= "{% static 'resources/img/g2.webp' %}" height="600px">
+        </div>
+        <div class="hero-button-container">
+            <hr class="line">
+            <button class="hero-button js--scroll-to-upload">Analyze</button>
+        </div>
+    </div>
+</section>
+
+<section class="upload-section js--section-upload">
+    <div class="input-container">
+        <div class="input-box">
+            <h4 class="ml-auto mr-auto">Upload Your Network File</h4>
+            <img class="upload-image" src="{% static 'resources/img/upload-2.png' %}" height="140px" >
+            <div class="form-container">
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    
+                    {{ form.network }}<b> You can upload .gml or .csv file </b>
+                    <br>
+                    <input class="normal-button" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

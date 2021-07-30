@@ -1,0 +1,331 @@
+:root{
+    --theme-Color: #10febd;
+    --theme-Color-2: #7270fe;
+    --theme-Color-3: #1d92fd;
+    --theme-border: 2px solid #10febd;
+}
+*{
+    font-family: 'Nunito', sans-serif;
+    color: white;
+}
+nav{
+    border-bottom: var(--theme-border);
+}
+nav li:hover {
+    border-top: var(--theme-border);
+}
+.main-container{
+    background-image: linear-gradient(rgb(0, 0, 0, 0.2),rgb(0, 0, 0, 0.2)), url(img/bg-5.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    min-height: 100vh
+}
+h4{
+    width: 40%;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+.main-section{
+    min-height: 100vh;
+}
+
+.hero-image-container{
+    margin-top: -70px;
+    margin-bottom: -30px;
+}
+.hero-text-container{
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 0;
+}
+
+.hero-text{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+.hero-button-container{
+    margin-top: 50px;
+    height: 150px;
+}
+
+.normal-button {
+    margin-top: 50px;
+    z-index: 1;
+    width: 160px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 18px;
+    border:solid 2px black;
+    font-weight: bold;
+    color: black;
+    background-color: var(--theme-Color);
+    border-radius: 20px;
+}
+
+.normal-button:hover{
+    transform: scale(1.1);
+    background-color: var(--theme-Color-3);
+}
+.hero-button{
+    position: relative;
+    top: -40px;
+    z-index: 1;
+    width: 160px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 18px;
+    border:solid 2px black;
+    font-weight: bold;
+    color: black;
+    background-color: var(--theme-Color);
+    border-radius: 20px;
+    animation-name: button_animation;
+    animation-duration: 3s;
+    animation-timing-function: steps(1);
+    transition: transform 0.3s;
+}
+
+.hero-button:hover{
+    transform: scale(1.1);
+    background-color: var(--theme-Color-3);
+}
+
+.upload-section{
+    height: 100vh;
+    padding: 50px;
+    text-align: center;
+    background-image: linear-gradient(var(--theme-Color), var(--theme-Color-3), var(--theme-Color-2));
+}
+.input-container{
+    background-color: black;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 4%;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+}
+input {
+    background-color: black;
+}
+
+.input-box{
+    height: 100%;
+    padding: 50px;
+    border-radius: 20px;
+    border: var(--theme-border);
+}
+
+.upload-image{
+    margin-left: 20px;
+    animation: zoominoutsinglefeatured 3s infinite ;
+}
+
+
+.form-container{
+    margin-top: 30px;
+    padding: 30px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 2px var(--theme-Color-3);
+    border-radius: 20px;
+}
+
+.submission-section{
+    padding: 50px;
+    text-align: center;
+}
+
+.submission-container{
+    width: 80%;
+    margin-top: 2%;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 20px;
+    border-radius: 20px;
+    background-image: linear-gradient(var(--theme-Color), var(--theme-Color-3), var(--theme-Color-2));
+}
+
+.submission-container h4{
+    color: black;
+    font-weight: 700;
+}
+
+.submission-container h6{
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+}
+.hidden-form{
+    display: none;
+}
+.submission-box{
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 50px;
+    border: solid 2px black;
+}
+
+.line {
+    z-index: -1;
+    border-bottom: solid 3px var(--theme-Color);
+    border-top: solid 3px var(--theme-Color);
+    border-radius: 5px;
+    width: 70%;
+    border-bottom-width: 3px;
+    height: 0px;
+    border-top-width: 3px;
+    animation-name: line_animation;
+    animation-duration: 3s;
+    animation-timing-function: linear; 
+}
+
+.result-section{
+    text-align: center;
+}
+
+.network-container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100vh;
+}
+
+.network-frame{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+iframe{
+    border-radius: 20px;
+    
+}
+.results-plot-section, .results-graph-section{
+    text-align: center;
+    padding: 30px;
+}
+.results-plot-section, .results-graph-section h1{
+    padding:30px;
+}
+.results-plot-section img{
+    width: 95%;
+}
+
+.faliure .row, .attack .row {
+    display: block;
+    text-align: center;
+}
+
+.faliure, .attack{
+    width: 80%;
+    border-radius: 20px;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid var(--theme-Color-3);
+}
+
+.plots{
+    padding-top: 50px;
+    width: 90%;
+    text-align: center;
+}
+
+.col-heading {
+    margin: 0;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--theme-Color-3);
+}
+
+
+
+.crucial-nodes-section{
+    padding: 50px;
+    text-align: center;
+}
+
+.node{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: inline-block;
+    background-color: var(--theme-Color-3);
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+.node-container{
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid var(--theme-Color-2);
+}
+
+.circle{
+    margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: var(--theme-Color-2);
+}
+
+.network-tolerance{
+    padding: 30px;
+}
+
+.recommendation-section{
+    padding: 50px;
+    height: 100vh;
+    text-align: center;
+}
+
+.text-container{
+    padding: 50px;
+}
+
+
+
+
+@keyframes line_animation {
+    from {
+        width: 0%;
+        border-color: var(--theme-Color-2);
+    }
+    to {
+        width:70%;
+        border-color: var(--theme-Color);
+    }
+}
+
+@keyframes button_animation {
+    0% {
+        opacity:0;
+        transform: scale(0);
+        background-color: var(--theme-Color-2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        background-color: var(--theme-Color);
+    }
+}
+
+@keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(1,1);
+    }
+    50% {
+        transform: scale(1.2,1.2);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
